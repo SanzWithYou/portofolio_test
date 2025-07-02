@@ -585,7 +585,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (comments.length > 0) {
         if (noCommentsYet) {
-          noCommentsYet.style.display = "none";
+          noCommentsYet.style.display = "block";
         }
         comments.forEach((comment) => displayComment(comment));
       } else {
@@ -683,8 +683,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function displayComment(comment) {
     const commentDiv = document.createElement("div");
-    commentDiv.classList.add("user-comment");
-    commentDiv.classList.add("fade-in"); // Tambahkan kelas fade-in untuk animasi
+    commentDiv.classList.add("user-comment"); // Tambahkan kelas fade-in untuk animasi
 
     let commentDate = "Tanggal tidak tersedia";
     if (comment.timestamp) {
